@@ -1,0 +1,57 @@
+
+
+<div class="row">
+  <div class="col-md-4 mb-4 md-mb-0">
+  <div class="form-group">
+    <label for="fname">First Name</label>
+    <input #fname type="text" class="form-control">
+  </div>
+  <div class="form-group">
+    <label for="lname">Last Name</label>
+    <input #lname type="text" class="form-control">
+  </div>
+  <div class="form-group">
+    <label for="email">Email</label>
+    <input #email type="text" class="form-control">
+  </div>
+  <div class="form-group">
+    <label for="age">Age</label>
+    <input #age type="text" class="form-control">
+  </div>
+  <button
+  (click)="onstdAdd(fname, lname, email, age)"
+  class="btn btn-sm btn-block bg-primary">Add students</button>
+  </div>
+  <div class="col-md-8">
+    <div class="table table-responsive">
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Sr.No.</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email</th>
+        <th>Age</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let std of student1 let i = index">
+        <td>{{i+1}}</td>
+        <td>{{std.fname}}</td>
+        <td>{{std.lname}}</td>
+        <td>{{std.email}}</td>
+        <td>{{std.age}}</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+</div>
+</div>
+
+
+
+
+
+
+
+
